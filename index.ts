@@ -33,6 +33,7 @@ export default {
       
     }
 
+    
     if (url.pathname === "/openapi.yaml") { return new Response(Bun.file("openapi.yaml")); }
 
     if(url.pathname == '/logo.png') {
