@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Algolia DocSearch ChatGPT Plugin",
+    "name_for_model": "Algolia DocSearch ChatGPT Plugin",
+    "description_for_human": "Plugin for asking Algolia DocSearch questions.",
+    "description_for_model": "Plugin for querying an Algolia DocSearch index and returning summarized results.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://algoliaopenaiplugin.shaneafsar.repl.co/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://algoliaopenaiplugin.shaneafsar.repl.co/logo.png",
+    "contact_email": "shane.afsar@gmail.com",
+    "legal_info_url": "http://www.example.com/legal"
+}

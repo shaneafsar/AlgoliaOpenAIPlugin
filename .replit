@@ -1,0 +1,13 @@
+run = "cowsay Configure me!"
+
+[nix]
+channel = "unstable"
+
+# Setting environment variables
+[env]
+FOO="foo"
+
+# Packager configuration for the Universal Package Manager
+# See https://github.com/replit/upm for supported languages.
+[packager]
+language = "nodejs"

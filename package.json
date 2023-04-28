@@ -1,0 +1,11 @@
+{
+  "name": "algoliaopenaiplugin",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.2.0"
+  },
+  "dependencies": {
+    "algoliasearch": "^4.17.0"
+  }
+}

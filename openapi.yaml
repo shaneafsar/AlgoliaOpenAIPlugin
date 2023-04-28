@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  title: Search API
+  version: 1.0.0
+servers:
+  - url: https://algoliaopenaiplugin.shaneafsar.repl.co
+paths:
+  /api/:
+    get:
+      summary: Search endpoint
+      parameters:
+        - name: q
+          in: query
+          description: Search string
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hits:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                        url_without_anchor:
+                          type: string
+                        anchor:
+                          type: string
+                        content:
+                          nullable: true
+                        type:
+                          type: string
+                        hierarchy:
+                          type: object
+                          properties:
+                            lvl0:
+                              nullable: true
+                            lvl1:
+                              nullable: true
+                            lvl2:
+                              nullable: true
+                            lvl3:
+                              nullable: true
+                            lvl4:
+                              nullable: true
+                            lvl5:
+                              nullable: true
+                            lvl6:
+                              nullable: true
+                        objectID:
+                          type: string
+                        _highlightResult:
+                          type: object
+                          properties:
+                            hierarchy:
+                              type: object
+                              properties:
+                                lvl0:
+                                  type: object
+                                  properties:
+                                    value:
+                                      type: string
+                                    matchLevel:
+                                      type: string
+                                    matchedWords:
+                                      type: array
+                                      items:
+                                        type: string
+                                lvl1:
+                                  type: object
+                                  properties:
+                                    value:
+                                      type: string
+                                    matchLevel:
+                                      type: string
+                                    fullyHighlighted:
+                                      type: boolean
+                                    matchedWords:
+                                      type: array
+                                      items:
+                                        type: string
+                                lvl2:
+                                  nullable: true
+                                lvl3:
+                                  nullable: true
+                                lvl4:
+                                  nullable: true
+                                lvl5:
+                                  nullable: true
+                                lvl6:
+                                  nullable: true
+      tags:
+        - search
